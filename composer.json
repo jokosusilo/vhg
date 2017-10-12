@@ -1,0 +1,23 @@
+{
+    "name": "jokosusilo/vhg",
+    "description": "Virtual Host Generator",
+    "license": "MIT",
+    "keywords": [
+        "virtual host",
+        "generator"
+    ],
+    "authors": [
+        {
+            "name": "Joko Susilo",
+            "email": "jksusilo28@gmail.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^2.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "vhg\\": "src/"
+        }
+    }
+}
