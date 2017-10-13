@@ -66,10 +66,7 @@ class VHostGenerator
 
     private function convertSlash($document_root_path)
     {
-        echo $document_root_path;
         $new_path = str_replace('\\', '/', $document_root_path);
-        echo "---";
-        echo $new_path;
         return $new_path;
     }
 
