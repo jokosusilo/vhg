@@ -7,8 +7,8 @@ $dotEnv->load();
 
 $vhost_template = 'vhost.conf';
 $xampp_path     = getenv('XAMPP_PATH');
-$document_root  = $xampp_path.'\\htdocs';
-$apache_vhost   = $xampp_path.'\\apache\\conf\\extra\\httpd-vhosts.conf';
+$document_root  = $xampp_path.'/htdocs';
+$apache_vhost   = $xampp_path.'/apache/conf/extra/httpd-vhosts.conf';
 $host_file      = getenv('HOST_FILE');
 
 if(!function_exists('readline')) {
@@ -45,8 +45,8 @@ while ($vhost_not_found) {
 $document_root_exist = true;
 
 while ($document_root_exist) {
-    $path               = readline('What\'s your document root path in htdocs? use (\\): ');
-    $document_root_path = $document_root.'\\'.$path;
+    $path               = readline('Where\'s document root path in htdocs? use (/) as dir separator: ');
+    $document_root_path = $document_root.'/'.$path;
 
     if (file_exists($document_root_path)) {
         $document_root_exist = false;
@@ -56,7 +56,7 @@ while ($document_root_exist) {
     }
 }
 
-echo "\nServer URL \t: '$server_name' \n";
+echo "\nServer URL \t\t: '$server_name' \n";
 echo "Document Root Path \t: '$document_root_path' \n";
 
 $confirm = readline('Are you ready to rock? (Y/N) ');
